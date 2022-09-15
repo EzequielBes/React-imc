@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+    padding-bottom: 50px;
+}
+
+.headerContainer {
+    
+    max-width: 900px;
+    
+    margin: 40px auto;
+    
+}
+.container {
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+}
+
+.container .left {
+    flex: 1;
+    margin-right: 40px;
+}
+.container .left h1 {
+    font-size: 40px;
+    color: #747479;
+}
+.container .left p {
+    font-size: 14px;
+    color: #8a8ea1;
+    margin-bottom: 40px;
+}
+.container .left input {
+    width: 100%;
+    border: 0;
+    border-bottom:2px solid rgba(150,163,171,.5);
+    padding: 10px 2px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: 0;
+    
+}
+.container .left button {
+    width: 100%;
+    font-size: 15px;
+    padding: 15px 0;
+    background-color: rgb(58, 134, 196);
+    border: none;
+    border-radius: 14px;
+    margin-top: 30px;
+    color: white;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+.container .left button:hover {
+    opacity: .8;
+}
+.container .left button:disabled {
+    opacity: .5;
+}
+
+
+.container .right {
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+.container .right .grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.container .right .rightBig {
+    display: flex;
+    flex: 1;
+
+}
+.container .right .rightArrow {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background-color: rgb(56, 117, 187);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: -35px;
+    margin-top: 145px;
+    cursor: pointer;
+    transition: all ease 0.8s;
+
+}
+.container .right .rightArrow:hover {
+   background-color: rgb(94, 94, 192);
+    
+}
+@media (max-width: 770px){
+    header {
+        padding: 0px 20px;
+    }
+    .container {
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+    .container .left {
+        margin-right:0px;
+        margin-bottom: 30px;
+
+    }
+    .container .right {
+        margin-left:0px;
+    }
+    .container .right .rightBig .rightArrow {
+        margin: 0px;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 375px){
+    .container .right .grid {
+        grid-template-columns: 1fr;
+    }
+}
